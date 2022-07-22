@@ -33,7 +33,7 @@
         <link href="css/css.css" rel="stylesheet">
         <link href="css/font.css" rel="stylesheet">
 
-        <title>Startseite | Abiball Eva Schulze</title>
+        <title>Intern | Abiball Eva Schulze</title>
     </head>
     <body>
         <header>
@@ -46,24 +46,24 @@
             <div class="navbar">
                 <a class="brandimg mr-32" href="https://abiball-evaschulze.de"><img src="assets/Logo.svg" alt="Logo"></a>
                 <div class="flex items-center gap-x-20">
-                    <div class="navlink active" onclick="window.location='index.html'">
+                    <div class="navlink" onclick="window.location='https://abiball-evaschulze.de/index.html'">
                         <span class="material-icons-round text-icon">info_outline</span>
                         <span class="text-title-large">Informationen</span>
                     </div>
-                    <div class="navlink" onclick="window.location='https://karten.abiball-evaschulze.de'">
-                        <span class="material-icons-round text-icon">local_activity</span>
-                        <span class="text-title-large">Karten</span>
-                    </div>
-                    <div class="navlink" onclick="window.location='https://intern.abiball-evaschulze.de/intern.html'">
+                    <div class="navlink" onclick="window.location='intern.html'">
                         <span class="material-icons-round text-icon">lock_outline</span>
                         <span class="text-title-large">Intern</span>
+                    </div>
+                    <div class="navlink active" onclick="window.location='finanzen.html'">
+                        <span class="material-icons-round text-icon">savings</span>
+                        <span class="text-title-large">Finanzen</span>
                     </div>
                 </div>
             </div>
             <div class="sidebar hidden" id="sidebar">
                 <div class="nav-top">
                     <div class="brandcon"><img src="assets/Logo.svg" alt="Logo"></div>
-                    <div onclick="window.location='index.html'" class="navlink active">
+                    <div onclick="window.location='https://abiball-evaschulze.de/index.html'" class="navlink">
                         <div>
                             <div>
                                 <span class="material-icons-round">info_outline</span>
@@ -71,28 +71,45 @@
                             <a href="index.html"><span>Informationen</span></a>
                         </div>
                     </div>
-                    <div onclick="window.location='https://karten.abiball-evaschulze.de'" class="navlink">
+                    <div onclick="window.location='finanzen.html'" class="navlink active">
                         <div>
                             <div>
-                                <span class="material-icons-round">local_activity</span>
+                                <span class="material-icons-round">savings</span>
                             </div>
-                            <a href="https://karten.abiball-evaschulze.de"><span>Karten</span></a>
+                            <a href="finanzen.html"><span>Finanzen</span></a>
                         </div>
                     </div>
-                </div>
-                <div class="profile-nav-con">
-                    <div class="" onclick="window.location='https://intern.abiball-evaschulze.de/intern.html'">
+                <div class="profile-nav-con active">
+                    <div class="" onclick="window.location='intern.html'">
                         <span class="material-icons-round">lock_outline</span>
                     </div>
                     <span class="user-name">Intern</span>
                 </div>
             </div>
         </header>
-        <main class="center middle">
-            <section class="col-span-full my-8 flex flex-col items-center text-light-primary dark:text-dark-primary">
-                <h2 class="text-headline-large">Abiball 2023 des Evangelischen Schulzentrums Leipzig</h2>
-                <h1 class="text-display-large">29.06.2023 im Felsenkeller Leipzig</h1>
+        <main class="center">
+            <section class="col-span-full">
+                <h1 class="text-display-small">Übersicht</h1>
+                <div class="flex justify-between overflow-y-auto" id="overview-finance-grid">
+                    <span class="text-headline-small">Einnahmen: <span id="earnings-full">0€</span></span>
+                    <span class="text-headline-small">Ausgaben: <span id="spending-full">0€</span></span>
+                    <span class="text-headline-small">|</span>
+                    <span class="text-headline-small ml-6">Bilanz: <span id="balance-full">0€</span></span>
+                </div>
+                <h2 class="text-headline-small mt-8">Einnahmen</h2>
+                <div class="grid grid-cols-3" id="earnings-grid">
+                    <div class="text-body-large">Titel</div>
+                    <div class="text-body-large">Informationen</div>
+                    <div class="text-body-large">Wert</div>
+                </div>
+                <h2 class="text-headline-small mt-8">Ausgaben</h2>
+                <div class="grid grid-cols-3" id="spending-grid">
+                    <div class="text-body-large">Titel</div>
+                    <div class="text-body-large">Informationen</div>
+                    <div class="text-body-large">Wert</div>
+                </div>
             </section>
         </main>
+        <script src="js/daten.js"></script>
     </body>
 </html>

@@ -10,6 +10,7 @@ module.exports = {
     content: ["*/*.html", "*.html", "js/*.js"],
     safelist: [
       "sidebar-expanded",
+      "check",
       {
         pattern: /subject|border-subject|bg-(red|green|yellow)-700|ql-(stroke|picker|toolbar|container|editor)/,
         variants: ['hover'],

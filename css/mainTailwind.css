@@ -32,6 +32,12 @@
     ul {
         @apply list-disc list-inside
     }
+    ul ul {
+        @apply ml-4
+    }
+    li {
+        @apply my-1
+    }
     .courierprime {
         font-family: "Courier Prime";
     }
@@ -792,6 +798,10 @@
     }
     .onesignal-customlink-container .button {
         @apply bg-light-primary text-light-onPrimary dark:bg-dark-primary dark:text-light-onPrimary
+    }
+
+    .member-grid {
+        @apply grid overflow-y-auto gap-x-4 gap-y-2
     }
 }
 

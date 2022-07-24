@@ -808,8 +808,8 @@
         @apply grid overflow-y-auto grid-cols-[repeat(15,minmax(max-content,1fr))]
     }
     .location-grid div {
-        @apply px-2 py-2 max-w-[300px]
-    }
+        @apply px-2 py-2 max-w-[300px] bg-light-surface dark:bg-dark-background fifteen:break-words fifteen:sticky fifteen:left-0 fifteen:max-w-[150px] fifteen:border-r-1 fifteen:border-black
+    }+
     .location-grid div.checkboxInside {
         @apply text-center
     }
@@ -820,7 +820,7 @@
         @apply !bg-red-700 text-white
     }
     .location-grid .available {
-        @apply bg-green-500
+        @apply bg-green-500 text-black
     }
     .location-grid .not-available {
         @apply bg-red-500 text-white

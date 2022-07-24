@@ -6,7 +6,6 @@ let pluginObject = {
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
-    darkMode: 'class',
     content: ["*/*.html", "*.html", "js/*.js"],
     safelist: [
       "sidebar-expanded",
@@ -181,7 +180,8 @@ module.exports = {
         )
       }),
       plugin(function ({ addVariant }) {
-        addVariant('not-hover', '&:not(:hover)')
+        addVariant('not-hover', '&:not(:hover)'),
+        addVariant('fifteen', '&:nth-child(15n+1)')
       })
     ]
   }

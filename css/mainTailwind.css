@@ -799,6 +799,13 @@
     .onesignal-customlink-container .button {
         @apply bg-light-primary text-light-onPrimary dark:bg-dark-primary dark:text-light-onPrimary
     }
+    
+    .info-list {
+        @apply text-body-large list-outside
+    }
+    .info-list li {
+        @apply my-2
+    }
 
     .member-grid {
         @apply grid overflow-y-auto gap-x-4 gap-y-2
@@ -828,6 +835,19 @@
     
     .vote-grid {
         @apply grid grid-cols-[repeat(12,minmax(max-content,1fr))] overflow-y-auto gap-x-2 gap-y-2 justify-items-center
+    }
+
+    .ranking-grid {
+        @apply grid grid-cols-[repeat(7,minmax(max-content,1fr))] overflow-y-auto gap-x-4 gap-y-2 justify-items-center
+    }
+    .ranking-grid .day-heading {
+        @apply col-span-7 text-headline-small
+    }
+    .ranking-grid .heading {
+        @apply text-title-medium
+    }
+    .ranking-grid div {
+        @apply max-w-[150px]
     }
 }
 

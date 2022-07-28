@@ -1,0 +1,628 @@
+<!DOCTYPE html> 
+<html lang="de">
+    <head>
+        <!-- Ein Service vom Meta-Tag-Generator auf http://www.metaner.de/ -->
+        <meta name="description" content="Der Abiball des Evangelischen Schulzentrums. Alle Informationen und den Kartenverkauf finden sie hier.">
+        <meta name="keywords" content="Abiball, Eva, Schulze, Eva, Schulze, Schule, Evangelisches, Schulzentrum, Leipzig">
+        <meta name="page-topic" content="Kultur">
+        <meta name="audience" content="Erwachsene, Frauen, Jugendliche, Kinder, Männer, Schüler">
+        <meta http-equiv="content-language" content="de">
+        <meta name="robots" content="noindex, follow">
+
+        <meta charset="UTF-8">
+        <meta http-equiv="content-Type" content="text/html; utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        
+        <link rel="icon" href="favicon.ico">
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <link href="css/css.css" rel="stylesheet">
+        <link href="css/font.css" rel="stylesheet">
+
+        <title>Intern | Abiball Eva Schulze</title>
+    </head>
+    <body>
+        <header>
+            <div class="appbar">
+                <div class="menu">
+                    <span class="material-icons-round">menu</span>
+                </div>
+                <a class="brand" href="https://abiball-evaschulze.de">Abiball EvaSchulze</a>
+            </div>
+            <div class="navbar">
+                <a class="brandimg mr-32" href="https://abiball-evaschulze.de"><img src="assets/Logo.svg" alt="Logo"></a>
+                <div class="flex items-center gap-x-20">
+                    <div class="navlink" onclick="window.location='https://abiball-evaschulze.de/index.html'">
+                        <span class="material-icons-round text-icon">info_outline</span>
+                        <span class="text-title-large">Informationen</span>
+                    </div>
+                    <div class="navlink active" onclick="window.location='intern.html'">
+                        <span class="material-icons-round text-icon">lock_outline</span>
+                        <span class="text-title-large">Intern</span>
+                    </div>
+                    <div class="navlink" onclick="window.location='finanzen.html'">
+                        <span class="material-icons-round text-icon">savings</span>
+                        <span class="text-title-large">Finanzen</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar hidden" id="sidebar">
+                <div class="nav-top">
+                    <div class="brandcon"><img src="assets/Logo.svg" alt="Logo"></div>
+                    <div onclick="window.location='https://abiball-evaschulze.de/index.html'" class="navlink">
+                        <div>
+                            <div>
+                                <span class="material-icons-round">info_outline</span>
+                            </div>
+                            <a href="index.html"><span>Informationen</span></a>
+                        </div>
+                    </div>
+                    <div onclick="window.location='finanzen.html'" class="navlink">
+                        <div>
+                            <div>
+                                <span class="material-icons-round">savings</span>
+                            </div>
+                            <a href="finanzen.html"><span>Finanzen</span></a>
+                        </div>
+                    </div>
+                <div class="profile-nav-con active">
+                    <div class="" onclick="window.location='intern.html'">
+                        <span class="material-icons-round">lock_outline</span>
+                    </div>
+                    <span class="user-name">Intern</span>
+                </div>
+            </div>
+        </header>
+        <main class="center">
+            <section class="col-span-full my-8 flex flex-col items-center text-light-primary dark:text-dark-primary">
+                <h2 class="text-headline-large">Nächstes Treffen</h2>
+                <h1 class="text-display-large text-center">15.09.2022<br>19:00-21:00 im Café Schulze</h1>
+            </section>
+            <section class="col-span-full my-4">
+                <h3 class="text-headline-medium">ToDo Liste</h3>
+                <ul class="list-none text-body-large">
+                    <li><span class="courierprime">[ ]</span> Organisiert und tauscht euch in euren Gruppen aus (WhatsApp, Email etc.)</li>
+                    <li><span class="courierprime">[x]</span> Wer 18+ Jahre alt ist und den Vertrag unterschreiben könnte meldet sich bitte bei Nike oder dem Koordinationsteam</li>
+                </ul>
+            </section>
+            <section class="col-span-full my-4">
+                <h3 class="text-headline-medium">Protokolle</h3>
+                <div class="">
+                    <a href="protokolle/02-6.html" class="link text-body-large">Protokoll 02.6</a>
+                    <a href="protokolle/14-6.html" class="link text-body-large">Protokoll 14.6</a>
+                    <a href="protokolle/30-6.html" class="link text-body-large">Protokoll 30.6</a>
+                </div>
+            </section>
+            <section class="col-span-full my-4">
+                <div class="flex justify-between cursor-pointer" id="location-collapse-btn">
+                    <h3 class="text-headline-medium">Locations</h3>
+                    <span class="text-icon-large material-icons-round">expand_more</span>
+                </div>
+                <div class="hidden p-2 rounded bg-light-surface shadow-elevation-1 dark:bg-dark-surface dark:shadow-none" id="location-collapse-con">
+                    <div class="location-grid">
+                        <div class="heading">Name</div>
+                        <div class="heading">Verfügbarkeit</div>
+                        <div class="heading">Sitzanzahl</div>
+                        <div class="heading">Kosten</div>
+                        <div class="heading">Kaution</div>
+                        <div class="heading">Zeitrahmen</div>
+                        <div class="heading">Technikverfügbarkeit</div>
+                        <div class="heading">Catering?</div>
+                        <div class="heading">Bühne?</div>
+                        <div class="heading">Ausreichend Plätze?</div>
+                        <div class="heading">Renigung?</div>
+                        <div class="heading">Versicherung?</div>
+                        <div class="heading">Sonstiges</div>
+                        <div class="heading">Verantwortlicher</div>
+                        <div class="heading">Stand</div>
+
+                        <div class="available">Alte Wollkämmerei</div>
+                        <div class="available italic">Verfügbar</div>
+                        <div class="available"></div>
+                        <div class="available"></div>
+                        <div class="available"></div>
+                        <div class="available"></div>
+                        <div class="available"></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="available attention">NUR 29.6.2023!!!</div>
+                        <div class="available italic">Christiane</div>
+                        <div class="available">schriftliches Angebot folgt, alle unsere Vorgaben sind erfüllt bzw. in einem KArtenpreis von 80 Euro inkl., aber nur für 29.6. möglich, 1.7. bereits ausgebucht</div>
+
+                        <div class="not-available">Haus Auensee</div>
+                        <div class="not-available italic">Vorraussetzungen nicht erreicht</div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available">Zeitraum entfällt</div>
+                        <div class="not-available italic">Ragnar</div>
+                        <div class="not-available"></div>
+
+                        <div class="not-available">Haus Leipzig</div>
+                        <div class="not-available italic">Vorraussetzungen nicht erreicht</div>
+                        <div class="not-available">500</div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available">Tonanlage, CD-Player</div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available">Stehtische, möglich 24.6-26.6 (29.6 fraglich)</div>
+                        <div class="not-available italic">Kay</div>
+                        <div class="not-available">angefragt, Antwort ausstehend</div>
+
+                        <div class="available">Kongresshalle</div>
+                        <div class="available italic">Verfügbar</div>
+                        <div class="available">500</div>
+                        <div class="available">8628 Brutto</div>
+                        <div class="available">Keine</div>
+                        <div class="available">12:00-02:00</div>
+                        <div class="available">Lautsprecher, Lichttechnik, Videotechnik, Bühne 12m x 3m</div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="available">auf Warteliste für 07.07 (2. Platz) , Catering über Anbieter möglich: 38 - 42€ pro Person inkl ein Getränk</div>
+                        <div class="available italic">Ragnar</div>
+                        <div class="available"></div>
+
+                        <div class="not-available">Kunstkraftwerk</div>
+                        <div class="not-available italic">Vorraussetzungen nicht erreicht</div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available">Keine Kapazität</div>
+                        <div class="not-available italic">Hannes</div>
+                        <div class="not-available"></div>
+
+                        <div class="available">Messehalle</div>
+                        <div class="available italic">Verfügbar</div>
+                        <div class="available">540</div>
+                        <div class="available">8628 Brutto</div>
+                        <div class="available"></div>
+                        <div class="available"></div>
+                        <div class="available"></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available">01.07. und 08.07.</div>
+                        <div class="available italic">Hannes</div>
+                        <div class="available">angefragt, Antwort ausstehend</div>
+
+                        <div class="not-available">Panometer/Michaelis</div>
+                        <div class="not-available italic">Vorraussetzungen nicht erreicht</div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available">zu teuer allein Catering: 109 €/Person</div>
+                        <div class="not-available italic">Katrin</div>
+                        <div class="not-available"></div>
+
+                        <div class="not-available">RB Bankettsääle</div>
+                        <div class="not-available italic">Vorraussetzungen nicht erreicht</div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available">Grundsätzlich möglich, aber können noch nicht so weit in die Zukunft schauen, erst sehr kurzfristige Zusage möglich, wenn Spielplan, Stadionführungen und Konzerte klar sind.</div>
+                        <div class="not-available italic">Christiane</div>
+                        <div class="not-available"></div>
+
+                        <div class="">Stadtbad</div>
+                        <div class="italic">Keine Informationen</div>
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class="checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class=""></div>
+                        <div class="italic">Katrin</div>
+                        <div class="">angefragt, Antwort ausstehend</div>
+
+                        <div class="not-available">Stadthafen</div>
+                        <div class="not-available italic">Vorraussetzungen nicht erreicht</div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available">22:00</div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available">open Air. chillout Party, Beach Party</div>
+                        <div class="not-available italic">Christiane</div>
+                        <div class="not-available"></div>
+
+                        <div class="not-available">Sternburg Brauerei</div>
+                        <div class="not-available italic">Absage</div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available">Absage, keine Abibälle</div>
+                        <div class="not-available italic">Kay</div>
+                        <div class="not-available"></div>
+
+                        <div class="not-available">Täubchenthal</div>
+                        <div class="not-available italic">Absage</div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available">Absage, keine Abibälle</div>
+                        <div class="not-available italic">Marc</div>
+                        <div class="not-available"></div>
+
+                        <div class="">Villa Hasenholz</div>
+                        <div class="italic">Keine Informationen</div>
+                        <div class="">250</div>
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class="checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="">derzeit keine Kontaktmöglichkeit </div>
+                        <div class="italic">Katrin</div>
+                        <div class="">Über Mail angefragt, Marc</div>
+
+                        <div class="not-available">Westbad</div>
+                        <div class="not-available italic">Absage</div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available">aktuell geschlossen </div>
+                        <div class="not-available italic">Marc</div>
+                        <div class="not-available"></div>
+
+                        <div class="">(Peterskirche)</div>
+                        <div class="italic">Keine Informationen</div>
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class="checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class=""> </div>
+                        <div class="italic"></div>
+                        <div class=""></div>
+
+                        <div class="available">Da Capo/Salles de Pologne (beides Michaelis)</div>
+                        <div class="available italic">Verfügbar</div>
+                        <div class="available">450 Plätze<br>
+                            <br>
+                            Eventhalle + Empore<br>
+                            900 qm<br>
+                            Runde Bankett-Tische</div>
+                        <div class="available">1.500 EUR brutto/Tag für Raum, 69,- pro Karte für Catering inkl. Sektempfang, aber exkl. sonstiger Getränke (Chipsystem - ca. 3 Euro pro Getränk, Alkoholisches eher 6 Euro siehe Angebot)<br>
+                            inkl. Deko, Tischwäsche, Menükarten etc.</div>
+                        <div class="available">keine, aber 4 Wochen vorher Anzahlung nach Kartenverkaufsstand, Rest nach dem Ball</div>
+                        <div class="available"></div>
+                        <div class="available">alles, was wir brauchen, aber Kosten für Technik-Partnerfirma SOUNDLIGHT kommen noch hinzu (extra Angebot nötig, stellen auch Personal für die Technik</div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="available">Da Capo NUR AM 29.06.2023<br>
+                            - ab 15 Uhr Aufbau möglich<br>
+                            - last order 1:30 und 2 Uhr ist Schluss<br>
+                            - Einalsspersonal durch uns selbst gestellt, alles ander inkl. (Garderobe, Bar, Toiltten usw.)<br>
+                            Salles de Pologne zu klein</div>
+                        <div class="available italic">Christiane</div>
+                        <div class="available"></div>
+
+                        <div class="available">Westgarten</div>
+                        <div class="available italic">Verfügbar</div>
+                        <div class="available"></div>
+                        <div class="available">Angebot ab MItte Juli, Abiparty am 9.7.22 danach erste Erfahruingen, 70-75,- sollten machbar sein</div>
+                        <div class="available">Keine</div>
+                        <div class="available">12h</div>
+                        <div class="available">sollte da sein</div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="available">für 1.7 geblockt</div>
+                        <div class="available italic">Marc</div>
+                        <div class="available"></div>
+
+                        <div class="not-available">Eventpalast</div>
+                        <div class="not-available italic">Absage</div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available">wir stellen unsere Location dem Evangelischen Schulzentrum für Abibälle bis auf weiteres nicht zur Verfügung. Der Geschäftsführer hat diese Entscheidung anhand der letzten beiden durchgeführten Abibälle getroffen.</div>
+                        <div class="not-available italic">Christiane</div>
+                        <div class="not-available"></div>
+
+                        <div class="not-available">Alte Hauptpost</div>
+                        <div class="not-available italic">Absage</div>
+                        <div class="not-available">200</div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available">zu klein</div>
+                        <div class="not-available italic">Marc</div>
+                        <div class="not-available"></div>
+
+                        <div class="not-available">Altes Landratsamt</div>
+                        <div class="not-available italic">Absage</div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available">scheint aktuell nicht in Betrieb zu sein</div>
+                        <div class="not-available italic">Christiane</div>
+                        <div class="not-available"></div>
+
+                        <div class="not-available">Spinnerei Halle 14</div>
+                        <div class="not-available italic">Absage</div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available">zu klein, Sanitärsituation schlecht, Räumlichkeiten eignen sich nicht für einen Abiball und nicht für Veranstaltungen mit dieser Personenanzahl.</div>
+                        <div class="not-available italic">Christiane</div>
+                        <div class="not-available"></div>
+
+                        <div class="not-available">Residenz/Spielstätte des Schaupielhauses in der Spinnerei</div>
+                        <div class="not-available italic">Absage</div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available">kein Raum für 450 sitzend an Tischen + Tanz vorhanden</div>
+                        <div class="not-available italic">Marc</div>
+                        <div class="not-available"></div>
+
+                        <div class="not-available">Werk II?</div>
+                        <div class="not-available italic">Absage</div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available"></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="not-available">Absage, keine Abibälle</div>
+                        <div class="not-available italic">Kay</div>
+                        <div class="not-available"></div>
+
+                        <div class="available">Felsenkeller</div>
+                        <div class="available italic">Verfügbar</div>
+                        <div class="available"></div>
+                        <div class="available">74 pro Person; 3 pro Person Afterparty</div>
+                        <div class="available"></div>
+                        <div class="available">Ballsaal von 18 bis 24 uhr, danach Afterparty möglich</div>
+                        <div class="available"></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled checked></div>
+                        <div class="available checkboxInside"><input class="check" type="checkbox" disabled></div>
+                        <div class="available">Nur 29.6; um Versicherung, GEMA Gebühren, DJ und Fotograf zusätzlich kümmern</div>
+                        <div class="available italic">Nike</div>
+                        <div class="available"></div>
+                    </div>
+                    <h4 class="text-headline-small mt-4">Materialien</h3>
+                    <div class="">
+                        <a href="location-material/Alte Wollkaemmerei - Angebot Abiball Evangelisches Schulzenrum Christiane Fischer-Münnich 450 PAX 29. Juni 2023.pdf" class="link text-body-large">Alte Wollkämmerei</a>
+                        <a href="location-material/Da Capo - Abiturball  - Evangelisches Schulzentrum - 29. Juni 2023.pdf" class="link text-body-large">Da Capo</a>
+                        <a href="location-material/Felsenkeller_ABSCHLUSSFEIER.pdf" class="link text-body-large">Felsenkeller</a>
+                        <a href="location-material/Felsenkeller_ABSCHLUSSFEIER(1).pdf" class="link text-body-large">Felsenkeller 2. Version</a>
+                        <a href="location-material/Haus Leipzig - Stadtbad - Abschlussball Saison 2023.pdf" class="link text-body-large">Haus Leipzig/Stadbad</a>
+                    </div>
+                    <h4 class="text-headline-small mt-4">Kostenüberblick</h4>
+                    <div class="ranking-grid">
+                        <div class="day-heading">29.06.2023</div>
+                        <div class="heading">Ort</div>
+                        <div class="heading">Raummiete</div>
+                        <div class="heading">Vorgebener Kartenpreis</div>
+                        <div class="heading">Sonstige Kosten</div>
+                        <div class="heading">Gesamte Kosten</div>
+                        <div class="heading">Gesamte Kartenkosten</div>
+                        <div class="heading">Anmerkungen</div>
+
+                        <div>Felsenkeller</div>
+                        <div>0€</div>
+                        <div>74€</div>
+                        <div>1.775€</div>
+                        <div>35.075€</div>
+                        <div>78€</div>
+                        <div>schon inkl. Extrakosten für Sektempfang und After Show Party</div>
+
+                        <div>Alte Wollkämmerei</div>
+                        <div>0€</div>
+                        <div>80€</div>
+                        <div></div>
+                        <div>36.000€</div>
+                        <div>80€</div>
+                        <div>Gesamtkosten mangels Angebot noch unklar</div>
+
+                        <div>Da Capo</div>
+                        <div>1.500€</div>
+                        <div>69€</div>
+                        <div></div>
+                        <div>32.550€</div>
+                        <div>72€</div>
+                        <div>Getränke nicht inkl.<br>
+                            Technikkosten kommen noch oben drauf<br>
+                            2 Uhr Schluss</div>
+
+                        <div>Haus Leipzig</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div>85€</div>
+                        <div></div>
+
+                        <div class="day-heading">01.07.2023</div>
+                        <div class="heading">Ort</div>
+                        <div class="heading">Raummiete</div>
+                        <div class="heading">Vorgebener Kartenpreis</div>
+                        <div class="heading">Sonstige Kosten</div>
+                        <div class="heading">Gesamte Kosten</div>
+                        <div class="heading">Gesamte Kartenkosten</div>
+                        <div class="heading">Anmerkungen</div>
+
+                        <div>Messehalle</div>
+                        <div>8.628€</div>
+                        <div></div>
+                        <div></div>
+                        <div>8.628€</div>
+                        <div>19€</div>
+                        <div>Kartenpreis?<br>
+                            Cateringpreis unklar</div>
+
+                        <div>Messehalle</div>
+                        <div>8.628€</div>
+                        <div></div>
+                        <div></div>
+                        <div>8.628€</div>
+                        <div>19€</div>
+                        <div>Kartenpreis?<br>
+                            Cateringpreis unklar</div>
+
+                        <div>Westgarten</div>
+                        <div>0€</div>
+                        <div>75€</div>
+                        <div></div>
+                        <div>33.750€</div>
+                        <div>75€</div>
+                        <div>open air &rarr; Wetterrisiko<br>
+                            Gesamtkosten mangels Angebot noch unklar</div>
+                    </div>
+                    <h4 class="text-headline-small mt-4">Wahl</h4>
+                    <div class="vote-grid">
+                        <div class="col-span-12 text-body-large">Wahl 29.6</div>
+                        <div class="col-span-2">Felsenkeller</div><div class="col-span-3">vs.</div><div class="col-span-2">Alte Wollkämmerei</div><div class="col-span-3">vs.</div><div class="col-span-2">Da Capo</div>
+                        <div class="col-span-2">10</div><div class="col-span-3"></div><div class="col-span-2">0</div><div class="col-span-3"></div><div class="col-span-2">0</div>
+                        <div class="col-span-12 mt-4 text-body-large">Wahl 01.7</div>
+                        <div class="col-span-2">Messehalle</div><div class="col-span-3">vs.</div><div class="col-span-2">Westgarten</div><div class="col-span-3">vs.</div><div class="col-span-2">Stadtbad</div>
+                        <div class="col-span-2">10</div><div class="col-span-3"></div><div class="col-span-2">0</div><div class="col-span-3"></div><div class="col-span-2">0</div>
+                        <div class="col-span-12 mt-4 text-body-large">Finale Wahle</div>
+                        <div class="col-span-4">Felsenkeller</div><div class="col-span-4">vs.</div><div class="col-span-4">Messehalle</div>
+                        <div class="col-span-4">6</div><div class="col-span-4"></div><div class="col-span-4">4</div>
+                    </div>
+                </div>
+            </section>
+            <section class="col-span-full my-4">
+                <h3 class="text-headline-medium">Kontaktdaten</h3>
+                <div class="member-grid" id="member-grid">
+                    <div class="">Name</div>
+                    <div class="">Email</div>
+                    <div class="">Telefon</div>
+                    <div class="w-8"></div>
+                </div>
+            </section>
+        </main>
+        <script src="js/daten.js"></script>
+        <script src="js/collapse.js"></script>
+    </body>
+</html>

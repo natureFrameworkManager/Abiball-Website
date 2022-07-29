@@ -33,8 +33,10 @@ module.exports = {
             backdrop: "rgba(0, 0, 0, 0.32)"
           },
           dark: {
-            primary: "#29436D", //#0083D9
-            onPrimary: "#FDCB30",
+            primary: "#6D7D99", //#29436D
+            altPrimary: "#29436D",
+            onPrimary: "#000",
+            altOnPrimary: "#FDCB30",
             background: "#121212",
             onBackground: "#fff",
             surface: "rgba(255, 255, 255, 0.12)",

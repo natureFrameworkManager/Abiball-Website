@@ -60,7 +60,7 @@
         @apply inline-block
     }
     .btn {
-        @apply whitespace-nowrap text-label-large px-8 py-2 bg-light-surface dark:bg-dark-surface text-light-onSurface dark:text-dark-onSurface border-3 border-light-primary dark:border-dark-primary rounded hover:bg-light-primary hover:dark:bg-dark-primary hover:text-light-onPrimary hover:dark:text-dark-onPrimary  hover:shadow-elevation-1 hover:dark:shadow-none disabled:bg-gray-500 disabled:border-gray-500
+        @apply whitespace-nowrap text-label-large px-8 py-2 bg-light-surface dark:bg-dark-surface text-light-onSurface dark:text-dark-onSurface border-3 border-light-primary dark:border-dark-altPrimary rounded hover:bg-light-primary hover:dark:bg-dark-altPrimary hover:text-light-onPrimary hover:dark:text-dark-onPrimary  hover:shadow-elevation-1 hover:dark:shadow-none disabled:bg-gray-500 disabled:border-gray-500
     }
 
     .btn.dark-light-fill {
@@ -72,11 +72,11 @@
     }
 
     .btn.filled {
-        @apply bg-light-primary dark:bg-dark-primary text-light-onPrimary dark:text-dark-onPrimary hover:dark:bg-[#0a88db] disabled:opacity-40
+        @apply bg-light-primary dark:bg-dark-altPrimary text-light-onPrimary dark:text-dark-altOnPrimary hover:dark:bg-[#3D63A1] disabled:opacity-40
     }
 
     .btn.active {
-        @apply !bg-light-primary dark:!bg-dark-primary !text-light-onPrimary dark:!text-dark-onPrimary hover:dark:!bg-[#0a88db] disabled:opacity-40
+        @apply !bg-light-primary dark:!bg-dark-altPrimary !text-light-onPrimary dark:!text-dark-altOnPrimary hover:dark:!bg-[#3D63A1] disabled:opacity-40
     }
 
     .btn-group {
@@ -848,6 +848,10 @@
     }
     .ranking-grid div {
         @apply max-w-[150px]
+    }
+
+    .section-header {
+        @apply text-body-small opacity-40 mb-4
     }
 }
 
